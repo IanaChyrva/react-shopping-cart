@@ -9,9 +9,7 @@
             "description": "About dog 1",
             "cutes": 4,
             "features": [
-                "with plate",
-                "no plate",
-                "but two dogs"
+                "Rich"
             ]
         },
         {
@@ -23,9 +21,10 @@
             "description": "About dog 2",
             "cutes": 5,
             "features": [
-                "with plate",
-                "no plate",
-                "but two dogs"
+                "Two dogs",
+                "Plate",
+                "Toy",
+                "Rich"
             ]
         },
         {
@@ -37,9 +36,8 @@
             "description": "About dog 3",
             "cutes": 10,
             "features": [
-                "with plate",
-                "no plate",
-                "but two dogs"
+                "Two",
+                "Plate"
             ]
         },
         {
@@ -51,9 +49,9 @@
             "description": "About dog 4",
             "cutes": 5,
             "features": [
-                "with plate",
-                "no plate",
-                "but two dogs"
+                "Stylish",
+                "Toy",
+                "Rich"
             ]
         }
     ]
