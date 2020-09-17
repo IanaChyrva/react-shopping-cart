@@ -1,6 +1,7 @@
 // feature-1
 import React from 'react';
 import Dogs from './components/Dogs';
+import Filter from './components/Filter';
 import data from './data.json'
 
 class App extends React.Component {
@@ -9,11 +10,31 @@ class App extends React.Component {
     this.state = {
       dogs: data.dogs,
       features: "",
-      sort: ""
+      cutes: ""
     }
   }
 
+  filterDogs = (event) => {
+    //impl
+    console.log(event.target.value);
+
+    if (event.target.value === "") {
+      this.setState({ feature: event.target.value, dog: data.dogs });
+    } else {
+      this.setState({
+        features: event.target.value,
+        dogs: data.dogs.filter(dog => dog.features.indexOf(event.target.value) >= 0)
+      })
+    }
+
+
+  }
+
+
+
+
   render() {
+    console.log(this.state);
     return (
       <div className="grid-container">
         <header>
@@ -22,6 +43,13 @@ class App extends React.Component {
         <main>
           <div className="content">
             <div className="main">
+              <Filter
+                features={this.state.features}
+                filterDogs={this.filterDogs}
+                sortCutes={this.sortCutes}
+                count={this.state.dogs.length}
+              >
+              </Filter>
               <Dogs dogs={this.state.dogs} />
             </div>
             <div className="sidebar">
